@@ -1,2 +1,2 @@
-# Nim-AI
-Training an AI to play the game nim using reinforcement learning.
+## Nim-AI
+Nim.py implements the game of Nim, where two players take turns removing objects from different piles. The Nim class manages the game state, including player turns and determining the winner. The NimAI class uses Q-learning to learn and make intelligent moves. The train function trains the AI by playing against itself, while the play function allows a human player to play against the AI. In play.py, the AI is trained in 10,000 games and then the user is able to play a game against the AI.
