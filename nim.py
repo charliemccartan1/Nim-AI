@@ -107,9 +107,7 @@ class NimAI():
         """
         Update the Q-value for the state `state` and the action `action`
         given the previous Q-value `old_q`, a current reward `reward`,
-        and an estiamte of future rewards `future_rewards`.
-
-        Use the formula:
+        and an estimate of future rewards `future_rewards` using the formula:
 
         Q(s, a) <- old value estimate
                    + alpha * (new value estimate - old value estimate)
@@ -123,13 +121,9 @@ class NimAI():
 
     def best_future_reward(self, state):
         """
-        Given a state `state`, consider all possible `(state, action)`
+        Given a state, consider all possible `(state, action)`
         pairs available in that state and return the maximum of all
         of their Q-values.
-
-        Use 0 as the Q-value if a `(state, action)` pair has no
-        Q-value in `self.q`. If there are no available actions in
-        `state`, return 0.
         """
         best_q_value = 0
 
@@ -149,9 +143,6 @@ class NimAI():
         If `epsilon` is `True`, then with probability
         `self.epsilon` choose a random available action,
         otherwise choose the best action available.
-
-        If multiple actions have the same Q-value, any of those
-        options is an acceptable return value.
         """
         actions = list(Nim.available_actions(state))
         if epsilon == True:
